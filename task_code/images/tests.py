@@ -13,27 +13,27 @@ from uuid import uuid4
 
 #Views Tests
 class AnalyzeImageViewTest(APITestCase):
-    # def test_valid_img_b64(self):
-    #     url = reverse('load_image')
-    #     current_dir = os.path.dirname(os.path.abspath(__file__))
-    #     image_path = os.path.join(current_dir, 'test_image.txt')
-    #     with open(image_path, 'r') as file:
-    #         valid_b64_data = file.read().strip()
+    def test_valid_img_b64(self):
+        url = reverse('load_image')
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        image_path = os.path.join(current_dir, 'test_image.txt')
+        with open(image_path, 'r') as file:
+            valid_b64_data = file.read().strip()
 
-    #     response = self.client.post(url, {'img': valid_b64_data}, format='json')
+        response = self.client.post(url, {'img': valid_b64_data}, format='json')
 
-    #     self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
+        self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
 
-    # def test_valid_img_file(self):
-    #     url = reverse('load_image')
-    #     current_dir = os.path.dirname(os.path.abspath(__file__))
-    #     image_path = os.path.join(current_dir, 'test_image.jpg')
-    #     with open(image_path, 'rb') as img:
+    def test_valid_img_file(self):
+        url = reverse('load_image')
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        image_path = os.path.join(current_dir, 'test_image.jpg')
+        with open(image_path, 'rb') as img:
 
-    #         image_file = SimpleUploadedFile(image_path, img.read(), content_type='image/jpeg')
-    #         response = self.client.post(url, {'img': image_file}, format='multipart')
+            image_file = SimpleUploadedFile(image_path, img.read(), content_type='image/jpeg')
+            response = self.client.post(url, {'img': image_file}, format='multipart')
 
-    #         self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
+            self.assertEqual(response.status_code, status.HTTP_202_ACCEPTED)
 
     def test_invalid_img(self):
         url = reverse('load_image')

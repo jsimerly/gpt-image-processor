@@ -1,4 +1,4 @@
-# Edlight Take Home Task
+# GPT Image Processor
 This django project was set up as a take home task to showcase my skill using Django, API development, and general web development practices. In the codebase you'll find a RESTful API, external API connections, and more!
 
 This project was completed by Jacob Simerly.

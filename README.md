@@ -1,8 +1,6 @@
 # GPT Image Processor
 This django project was set up as a take home task to showcase my skill using Django, API development, and general web development practices. In the codebase you'll find a RESTful API, external API connections, and more!
 
-This project was completed by Jacob Simerly.
-
 ## Features
 - **Analyze Images**: The ability to upload an image (either a base 64 string or a file upload via form) and then have that image sent off to ChatGPT's vision-preview model to get a description of what is happening in the image.
 
